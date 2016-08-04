@@ -1,0 +1,6 @@
+_notes
+.idea
+.env
+vendor
+bower_components
+Controllers
