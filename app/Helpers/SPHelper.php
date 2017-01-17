@@ -46,6 +46,7 @@ class SPHelper
             'trackOpens'    => true,
             'trackClicks'   => false,
             'inlineCss'     => true,
+            'async' => false, //default true | false for synchronous transmission
         ];
 
         return;
@@ -81,8 +82,8 @@ class SPHelper
             try {
                 $response = $promise->wait();
                 echo $response->getStatusCode() . "\n";
-                print_r($response->getBody()) . "\n";
-                return $response;
+                //print_r($response->getBody()) . "\n";
+                return $response->getBody();
 
             } catch (\Exception $e) {
                 echo $e->getCode() . "\n";

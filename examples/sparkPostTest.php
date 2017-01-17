@@ -51,25 +51,26 @@ if(!empty( $_POST['sendEmail'] ) && $_POST['sendEmail'] == 'Send'){
         ],
         'substitution_data' => $substitutionData,
         'recipients' => $recipients,
-        'cc' => [
-            /*[
+        /*'cc' => [
+            [
                 'address' => [
                     'name' => 'Ankit1',
                     'email' => 'alex.ankit+11@ithands.net',
                 ],
-            ],*/
-        ],
+            ],
+        ],*/
     ];
 
-    $options=array_filter($options);
+    //$options=array_filter($options);
 
     $apiKey=getenv('SP_API_KEY');
 
     $SparkPost = new SPHelper($apiKey);
     $SparkPost->setOptions($options);
-    print_r($SparkPost->options);
+    //print_r($SparkPost->options);
     $SparkPost->debugMode();
     $response = $SparkPost->sendEmail();
+    print_r($response);
 }
 
 ?>

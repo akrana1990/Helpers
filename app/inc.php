@@ -12,3 +12,12 @@
 $env = new \App\Bootstrap\DetectEnvironment();
 $env->bootstrap();
 unset($env);
+
+/*
+ * ------------------------------------------------------
+ *  Load constants file
+ * ------------------------------------------------------
+ *
+ */
+
+require_once('Config/constants.php');

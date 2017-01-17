@@ -44,6 +44,9 @@
                 <li class="page-scroll">
                     <a href="sparkPostTest.php">Spark Post</a>
                 </li>
+                <li class="page-scroll">
+                    <a href="s3Test.php">S3</a>
+                </li>
 
             </ul>
         </div>
